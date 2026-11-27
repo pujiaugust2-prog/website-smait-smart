@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#B54829">
+  <title>SMAIT SMART YBN | School of Identity</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: "#F1E7DC",
+            rust: "#B54829",
+            rustdark: "#96391F",
+            teal: "#064B49",
+            gold: "#F6A51A",
+            ink: "#263A37"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: #F1E7DC;
+      color: #263A37;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: .6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-img {
+      transition: transform .5s ease;
+    }
+
+    .gallery-card:hover .gallery-img {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 border-b border-[#d8c7b7] bg-cream/95 backdrop-blur">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+
+    <a href="#home" class="leading-tight">
+      <strong class="block text-lg font-black text-teal">SMAIT SMART YBN</strong>
+      <small class="tracking-[.2em] text-rust">SCHOOL OF IDENTITY</small>
+    </a>
+
+    <button id="menuButton" class="text-2xl text-teal md:hidden" aria-label="Buka menu">☰</button>
+
+    <div id="navMenu" class="absolute left-0 right-0 top-full hidden bg-cream p-5 shadow-lg md:static md:flex md:items-center md:gap-6 md:bg-transparent md:p-0 md:shadow-none">
+      <a href="#home" class="block py-2 text-sm font-semibold text-teal">Home</a>
+      <a href="#tentang" class="block py-2 text-sm font-semibold text-teal">Tentang</a>
+      <a href="#program" class="block py-2 text-sm font-semibold text-teal">Program</a>
+      <a href="#fasilitas" class="block py-2 text-sm font-semibold text-teal">Fasilitas</a>
+      <a href="#dokumentasi" class="block py-2 text-sm font-semibold text-teal">Dokumentasi</a>
+      <a href="#ppdb" class="block py-2 text-sm font-semibold text-teal">PPDB</a>
+      <a href="#kontak" class="inline-block rounded-full bg-rust px-5 py-2 text-sm font-bold text-white">Hubungi Kami</a>
+    </div>
+
+  </nav>
+</header>
+
+<main>
+
+<!-- HOME / HERO -->
+<section id="home" class="overflow-hidden">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8">
+
+    <div class="reveal">
+      <p class="mb-5 inline-block rounded-full border border-rust px-4 py-2 text-xs font-bold tracking-widest text-rust">
+        SCHOOL OF IDENTITY
+      </p>
+
+      <h1 class="text-4xl font-black leading-tight text-teal sm:text-5xl lg:text-6xl">
+        Membentuk Generasi
+        <span class="text-rust">SMART</span>
+        untuk Masa Depan.
+      </h1>
+
+      <p class="mt-6 max-w-xl leading-8 text-ink/80">
+        Pendidikan yang mengintegrasikan akademik, pembinaan Al-Qur'an,
+        dan pengembangan potensi diri untuk membentuk generasi Sholih,
+        Mulia, Analitis, Responsif, dan Tangguh.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#tentang" class="rounded-full bg-rust px-6 py-3 font-bold text-white hover:bg-rustdark">
+          Kenali Sekolah
+        </a>
+        <a href="#ppdb" class="rounded-full border-2 border-teal px-6 py-3 font-bold text-teal hover:bg-teal hover:text-white">
+          Informasi PPDB
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal relative">
+      <div class="absolute -right-5 top-8 h-4/5 w-4/5 rounded-[3rem] bg-rust"></div>
+      <img src="image/hero.jpg"
+           alt="Siswa SMAIT SMART YBN"
+           class="relative z-10 w-full rounded-[2rem] shadow-xl">
+      <div class="absolute -bottom-5 left-5 z-20 rounded-xl bg-teal p-5 text-white">
+        <p class="text-xs tracking-widest">SMAIT SMART YBN</p>
+        <p class="text-xl font-black">School of Identity</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+  <div class="grid gap-10 lg:grid-cols-2">
+
+    <div class="reveal">
+      <p class="font-bold tracking-widest text-rust">TENTANG SEKOLAH</p>
+      <h2 class="mt-3 text-4xl font-black text-teal">
+        Pendidikan, karakter, dan potensi diri.
+      </h2>
+    </div>
+
+    <div class="reveal">
+      <p class="text-lg leading-8 text-ink">
+        SMAIT SMART YBN adalah sekolah Islam yang mengintegrasikan
+        pendidikan akademik, pembinaan Al-Qur'an, dan pengembangan
+        potensi diri untuk membentuk generasi yang Sholih, Mulia,
+        Analitis, Responsif, dan Tangguh.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+
+    <article class="reveal rounded-2xl bg-rust p-6 text-white">
+      <h3 class="text-4xl font-black">S</h3>
+      <h4 class="mt-2 text-xl font-bold">Sholih</h4>
+      <p class="mt-3 text-sm">Pribadi beriman dan bertakwa serta berpegang pada nilai Islam.</p>
+    </article>
+
+    <article class="reveal rounded-2xl bg-teal p-6 text-white">
+      <h3 class="text-4xl font-black">M</h3>
+      <h4 class="mt-2 text-xl font-bold">Mulia</h4>
+      <p class="mt-3 text-sm">Berakhlak Qurani, menghargai sesama, dan menebar kebaikan.</p>
+    </article>
+
+    <article class="reveal rounded-2xl bg-[#D96A28] p-6 text-white">
+      <h3 class="text-4xl font-black">A</h3>
+      <h4 class="mt-2 text-xl font-bold">Analitis</h4>
+      <p class="mt-3 text-sm">Berpikir tajam, logis, dan reflektif.</p>
+    </article>
+
+    <article class="reveal rounded-2xl bg-[#8F3825] p-6 text-white">
+      <h3 class="text-4xl font-black">R</h3>
+      <h4 class="mt-2 text-xl font-bold">Responsif</h4>
+      <p class="mt-3 text-sm">Peka, peduli lingkungan, adaptif, dan proaktif.</p>
+    </article>
+
+    <article class="reveal rounded-2xl bg-[#D58A18] p-6 text-white">
+      <h3 class="text-4xl font-black">T</h3>
+      <h4 class="mt-2 text-xl font-bold">Tangguh</h4>
+      <p class="mt-3 text-sm">Memiliki daya juang, disiplin, dan optimis.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program" class="bg-[#E8D8C8] py-20">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+    <div class="reveal">
+      <p class="font-bold tracking-widest text-rust">PROGRAM UNGGULAN</p>
+      <h2 class="mt-3 text-4xl font-black text-teal">
+        Mengembangkan Potensi Terbaik Siswa
+      </h2>
+      <p class="mt-4 max-w-2xl leading-7 text-ink/80">
+        Program pembinaan yang terintegrasi untuk mengembangkan potensi terbaik siswa.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-3">
+
+      <article class="reveal rounded-3xl bg-cream p-7 shadow-lg">
+        <span class="text-3xl font-black text-rust">01</span>
+        <h3 class="mt-4 text-xl font-black text-teal">Tahzin, Tahfidz, Tafhim Al-Qur'an</h3>
+        <p class="mt-3 text-sm leading-7">Pembinaan membaca, menghafal, dan memahami Al-Qur'an.</p>
+      </article>
+
+      <article class="reveal rounded-3xl bg-cream p-7 shadow-lg">
+        <span class="text-3xl font-black text-rust">02</span>
+        <h3 class="mt-4 text-xl font-black text-teal">Penguatan Ibadah dan Adab</h3>
+        <p class="mt-3 text-sm leading-7">Penguatan karakter dan pembiasaan nilai-nilai Islam.</p>
+      </article>
+
+      <article class="reveal rounded-3xl bg-cream p-7 shadow-lg">
+        <span class="text-3xl font-black text-rust">03</span>
+        <h3 class="mt-4 text-xl font-black text-teal">Pengembangan Diri</h3>
+        <p class="mt-3 text-sm leading-7">Life Skill Program untuk mengembangkan kemampuan dan kemandirian.</p>
+      </article>
+
+    </div>
+
+    <div class="reveal mt-8 rounded-3xl bg-teal p-8 text-white">
+      <h3 class="text-xl font-black text-gold">DESAIN KURIKULUM</h3>
+      <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <p><b>Khas YBN</b><br><small>Kurikulum khas yayasan.</small></p>
+        <p><b>Takhassus Qur'an</b><br><small>Penguatan pembelajaran Al-Qur'an.</small></p>
+        <p><b>Kurikulum Nasional</b><br><small>Pembelajaran nasional.</small></p>
+        <p><b>Khas JSIT</b><br><small>Kurikulum khas JSIT.</small></p>
+      </div>
+    </div>
+
+    <div class="reveal mt-10">
+      <h3 class="text-2xl font-black text-teal">Ekstrakurikuler</h3>
+      <p class="mt-3 leading-7">
+        <b>Wajib:</b> Pramuka dan Tapak Suci.
+        <b>Pilihan:</b> Panahan dan Futsal.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FASILITAS -->
+<section id="fasilitas" class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+  <div class="reveal">
+    <p class="font-bold tracking-widest text-rust">SARANA & PRASARANA</p>
+    <h2 class="mt-3 text-4xl font-black text-teal">Fasilitas Sekolah</h2>
+  </div>
+
+  <div class="reveal mt-8 flex flex-wrap gap-3">
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Masjid</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Ruang kelas</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Asrama</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Lapangan badminton</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Lab komputer</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Ruang studio</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Green house</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Ruang belajar</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">UKS</span>
+    <span class="rounded-full bg-white px-5 py-3 text-teal">Perpustakaan</span>
+  </div>
+</section>
+
+<!-- DOKUMENTASI: MAKSIMAL 5 FOTO -->
+<section id="dokumentasi" class="bg-teal py-20 text-white">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+    <div class="reveal">
+      <p class="font-bold tracking-widest text-gold">CERITA SEKOLAH</p>
+      <h2 class="mt-3 text-4xl font-black">Dokumentasi Kegiatan</h2>
+      <p class="mt-3 text-white/75">Potret aktivitas dan pengembangan potensi siswa.</p>
+    </div>
+
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+      <button class="gallery-card reveal overflow-hidden rounded-2xl bg-cream text-left text-teal"
+        data-lightbox="image/dokumentasi/kegiatan-1.jpg"
+        data-caption="Kegiatan Belajar Mengajar">
+        <div class="h-52 overflow-hidden">
+          <img src="image/dokumentasi/kegiatan-1.jpg" alt="Kegiatan Belajar Mengajar" class="gallery-img h-full w-full object-cover">
+        </div>
+        <div class="p-5">
+          <small class="font-bold text-rust">01 / PEMBELAJARAN</small>
+          <h3 class="mt-2 text-lg font-black">Kegiatan Belajar Mengajar</h3>
+        </div>
+      </button>
+
+      <button class="gallery-card reveal overflow-hidden rounded-2xl bg-cream text-left text-teal"
+        data-lightbox="image/dokumentasi/kegiatan-2.jpg"
+        data-caption="Bina Pribadi Islami">
+        <div class="h-52 overflow-hidden">
+          <img src="image/dokumentasi/kegiatan-2.jpg" alt="Bina Pribadi Islami" class="gallery-img h-full w-full object-cover">
+        </div>
+        <div class="p-5">
+          <small class="font-bold text-rust">02 / PEMBINAAN</small>
+          <h3 class="mt-2 text-lg font-black">Bina Pribadi Islami</h3>
+        </div>
+      </button>
+
+      <button class="gallery-card reveal overflow-hidden rounded-2xl bg-cream text-left text-teal"
+        data-lightbox="image/dokumentasi/kegiatan-3.jpg"
+        data-caption="Tasmi' Al-Qur'an">
+        <div class="h-52 overflow-hidden">
+          <img src="image/dokumentasi/kegiatan-3.jpg" alt="Tasmi' Al-Qur'an" class="gallery-img h-full w-full object-cover">
+        </div>
+        <div class="p-5">
+          <small class="font-bold text-rust">03 / AL-QUR'AN</small>
+          <h3 class="mt-2 text-lg font-black">Tasmi' Al-Qur'an</h3>
+        </div>
+      </button>
+
+      <button class="gallery-card reveal overflow-hidden rounded-2xl bg-cream text-left text-teal"
+        data-lightbox="image/dokumentasi/kegiatan-4.jpg"
+        data-caption="SMART Project Engineering">
+        <div class="h-52 overflow-hidden">
+          <img src="image/dokumentasi/kegiatan-4.jpg" alt="SMART Project Engineering" class="gallery-img h-full w-full object-cover">
+        </div>
+        <div class="p-5">
+          <small class="font-bold text-rust">04 / KARYA SISWA</small>
+          <h3 class="mt-2 text-lg font-black">SMART Project Engineering</h3>
+        </div>
+      </button>
+
+      <button class="gallery-card reveal overflow-hidden rounded-2xl bg-cream text-left text-teal"
+        data-lightbox="image/dokumentasi/kegiatan-5.jpg"
+        data-caption="SMART Project Multimedia">
+        <div class="h-52 overflow-hidden">
+          <img src="image/dokumentasi/kegiatan-5.jpg" alt="SMART Project Multimedia" class="gallery-img h-full w-full object-cover">
+        </div>
+        <div class="p-5">
+          <small class="font-bold text-rust">05 / KARYA SISWA</small>
+          <h3 class="mt-2 text-lg font-black">SMART Project Multimedia</h3>
+        </div>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- PPDB / FLYER -->
+<section id="ppdb" class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+
+  <div class="reveal text-center">
+    <p class="font-bold tracking-widest text-rust">INFORMASI PENDAFTARAN</p>
+    <h2 class="mt-3 text-4xl font-black text-teal">PPDB 2027/2028</h2>
+    <p class="mt-3 text-ink/75">Penerimaan Murid Baru SMAIT SMART YBN.</p>
+  </div>
+
+  <div class="mt-10 grid items-center gap-10 lg:grid-cols-2">
+
+    <button id="flyerButton" class="reveal overflow-hidden rounded-3xl bg-white p-2 shadow-xl">
+      <img src="image/flyer-ppdb.jpg" alt="Flyer PPDB SMAIT SMART YBN" class="w-full rounded-2xl">
+      <span class="block py-3 font-bold text-teal">Klik untuk memperbesar flyer</span>
+    </button>
+
+    <div class="reveal">
+      <h3 class="text-2xl font-black text-teal">Alur Pendaftaran</h3>
+
+      <ol class="mt-6 space-y-5 border-l-2 border-rust pl-6">
+        <li><b class="text-rust">01. Isi formulir pendaftaran</b><p class="mt-1 text-sm">Calon siswa mengisi formulir dan melampirkan bukti pembayaran.</p></li>
+        <li><b class="text-rust">02. Seleksi observasi & wawancara</b><p class="mt-1 text-sm">Calon siswa mengikuti tahapan seleksi.</p></li>
+        <li><b class="text-rust">03. Pengumuman hasil seleksi</b><p class="mt-1 text-sm">Diterima, tidak diterima, atau daftar menunggu.</p></li>
+        <li><b class="text-rust">04. Daftar ulang</b><p class="mt-1 text-sm">Melengkapi administrasi yang disepakati saat wawancara.</p></li>
+      </ol>
+
+      <div class="mt-8 rounded-2xl bg-[#E8D8C8] p-6">
+        <h4 class="font-black text-teal">Rincian Biaya</h4>
+        <div class="mt-4 space-y-3 text-sm">
+          <p class="flex justify-between"><span>Wakaf Sarpras</span><b>Rp6.000.000</b></p>
+          <p class="flex justify-between"><span>Perlengkapan Murid</span><b>Rp1.500.000</b></p>
+          <p class="flex justify-between"><span>Uang Kegiatan</span><b>Rp2.000.000</b></p>
+          <p class="flex justify-between"><span>SPP per bulan</span><b>Rp500.000</b></p>
+          <hr class="border-rust/30">
+          <p class="flex justify-between text-base font-black text-rust"><span>Total</span><span>Rp10.000.000</span></p>
+        </div>
+        <p class="mt-3 text-xs text-ink/70">Perlengkapan murid meliputi seragam khas, jas almamater, dan seragam olahraga.</p>
+      </div>
+
+      <a href="https://wa.me/6285881300343" target="_blank"
+        class="mt-6 inline-block rounded-full bg-rust px-6 py-3 font-bold text-white">
+        Tanya PPDB via WhatsApp
+      </a>
+
+      <a href="image/brosur-ppdb-lengkap.pdf" target="_blank"
+        class="ml-2 inline-block rounded-full border-2 border-teal px-6 py-3 font-bold text-teal">
+        Brosur Lengkap
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="bg-[#E8D8C8] py-20">
+  <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-2 lg:px-8">
+
+    <div class="reveal">
+      <p class="font-bold tracking-widest text-rust">HUBUNGI KAMI</p>
+      <h2 class="mt-3 text-4xl font-black text-teal">Kenali Kami Lebih Dekat.</h2>
+      <p class="mt-5 leading-7">Untuk informasi sekolah dan pendaftaran, silakan hubungi kontak resmi SMAIT SMART YBN.</p>
+    </div>
+
+    <div class="reveal rounded-3xl bg-teal p-8 text-white">
+      <h3 class="text-xl font-black text-gold">SMAIT SMART YBN</h3>
+
+      <div class="mt-6 space-y-5">
+        <div>
+          <small class="text-white/60">WHATSAPP</small>
+          <a href="https://wa.me/6285881300343" target="_blank" class="block text-xl font-bold">0858-8130-0343 ↗</a>
+        </div>
+
+        <div>
+          <small class="text-white/60">INSTAGRAM</small>
+          <a href="https://instagram.com/smaitsmartybn" target="_blank" class="block font-bold">@smaitsmartybn ↗</a>
+        </div>
+
+        <div>
+          <small class="text-white/60">YOUTUBE</small>
+          <a href="https://youtube.com/@rqb-tv" target="_blank" class="block font-bold">rqb-tv ↗</a>
+        </div>
+
+        <div>
+          <small class="text-white/60">ALAMAT</small>
+          <p class="mt-1 leading-7">Jl. Parfi Bojong Neros, RT. 03/07, Kelurahan Curug, Kecamatan Bogor Barat.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-[#073B39] px-5 py-8 text-center text-white">
+  <p class="font-black tracking-widest">SMAIT SMART YBN</p>
+  <p class="mt-1 text-xs tracking-widest text-white/60">SCHOOL OF IDENTITY</p>
+  <p class="mt-4 text-xs text-white/50">© 2026 SMAIT SMART YBN</p>
+</footer>
+
+<!-- TOMBOL WHATSAPP -->
+<a href="https://wa.me/6285881300343" target="_blank"
+  class="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-green-600 text-2xl text-white shadow-xl"
+  aria-label="WhatsApp">✆</a>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox fixed inset-0 z-[100] items-center justify-center bg-black/90 p-4">
+  <button id="closeLightbox" class="absolute right-5 top-5 text-4xl text-white" aria-label="Tutup">×</button>
+  <div class="max-w-5xl text-center">
+    <img id="lightboxImage" src="" alt="" class="mx-auto max-h-[82vh] max-w-full rounded-xl">
+    <p id="lightboxCaption" class="mt-3 text-white"></p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

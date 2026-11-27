@@ -1,0 +1,6 @@
+/* Gaya tambahan di luar Tailwind: animasi reveal, anchor offset, fokus */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+section[id]{scroll-margin-top:72px}
+:focus-visible{outline:3px solid #F2B01E;outline-offset:2px}
